@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-family: "Fraunces";
+    src: url(Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+  }
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    justify-content: center;
+}
+.container {
+  width: 600px;
+  height: 450px;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.container__image {
+    height: auto;
+    width: 300px;
+    margin: 0;
+    border-radius: 16px 0 0 16px;
+    background-image: url('images/image-product-desktop.jpg');
+    background-size: cover;
+}
+
+.container__info {
+    width: 300px;
+    background-color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 0 16px 16px 0;
+}
+
+.container__type{
+    margin: 0;
+    color: hsla(228, 12%, 48%, 0.8);
+    font-family: "Montserrat";
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.container__title {
+    color: hsl(212, 21%, 14%);
+    font-size: 32px;
+    font-family: "Fraunces";
+    margin-top: 20px;
+    margin-bottom: 25px;
+    line-height: 1;
+}
+
+.container__description {
+    font-size: 13px;
+    color: hsla(228, 12%, 48%, 0.8);
+    font-family: "Montserrat";
+    margin: 0;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+.container__price {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.price__discount {
+    font-size: 30px;
+    font-weight: bold;
+    color: hsl(158, 36%, 37%);
+    margin: 0;
+    font-family: "Fraunces";
+}
+
+.price__no-discount {
+    font-size: 12px;
+    margin-left: 20px;
+    font-family: "Montserrat";
+    text-decoration: line-through;
+    color: hsla(228, 12%, 48%, 0.8);
+    font-weight: bold;
+}
+
+.btn-buy {
+    border-radius: 6px;
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;   
+}
+
+.btn-buy p {
+    margin-left: 10px;
+    font-family: "Montserrat";
+}
+
+.btn-buy img {
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 779px) {
+
+    body {
+        margin: 25px 15px 25px 15px;
+    }
+    
+    .container {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0,0);
+        flex-direction: column; 
+    }
+
+    .container__image{
+        background-image: url('./images/image-product-mobile.jpg');
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .container__info{
+        border-radius: 0 0 16px 16px;
+        height: fit-content;
+        width: 100%;
+        display: block;
+    }
+    
+}
+
+
